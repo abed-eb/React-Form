@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import "./Form.css";
-import { initCC } from "matomo-form-tracker";
 
 const initialState = {
   name: "",
@@ -10,9 +9,7 @@ const initialState = {
 
 const Form = () => {
   const [state, setState] = useState(initialState);
-  useEffect(() => {
-    initCC(1);
-  }, []);
+  useEffect(() => {}, []);
   const handleChange = (event) => {
     let name = event.target.name;
     let value = event.target.value;
